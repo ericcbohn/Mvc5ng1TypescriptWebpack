@@ -19,3 +19,6 @@ MvcNgTs.Web/ApplicationInsights.config
 # npm modules
 MvcNgTs.Web/node_modules/
 
+# log files
+MvcNgTs.Web/App_Data/log/
+
