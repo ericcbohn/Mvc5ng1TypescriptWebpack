@@ -1,0 +1,21 @@
+# Build results
+MvcNgTs.Web/bin/
+MvcNgTs.Web/Bin/
+MvcNgTs.Web/obj/
+MvcNgTs.Web/Obj/
+
+# cache/options directory
+.vs/
+MvcNgTs.Web/.vs/
+MvcNgTs.Web/ClientApp/dist
+MvcNgTs.Web/Views/Shared/_Layout.cshtml
+
+# NuGet Packages
+packages/
+
+# Microsoft Azure ApplicationInsights config file
+MvcNgTs.Web/ApplicationInsights.config
+
+# npm modules
+MvcNgTs.Web/node_modules/
+

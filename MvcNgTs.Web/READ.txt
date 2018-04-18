@@ -1,0 +1,8 @@
+﻿Server Dependencies:
+- gulp (npm i -g gulp): less to css, karma-jasmine unit-tests
+- karma (npm i -g karma)
+- node/npm (npm i -g npm)
+- NOTE: webpack and webpack-cli is installed in project so no version conflicts vs installing globally
+- browsers (on build server for karma tests): chrome, firefox, IE
+- IDM: https://tfs.mayo.edu/tfs/MayoClinic/Mayo%20Open%20Developer%20Network/_git/mayo-idm-generic-configuration?path=%2FREADME.md&version=GBmaster&_a=contents
+- IDM local IIS: https://tfs.mayo.edu/tfs/MayoClinic/Mayo%20Open%20Developer%20Network/_git/mayo-idm-generic-setup?path=%2FREADME.md&version=GBmaster&_a=contents
