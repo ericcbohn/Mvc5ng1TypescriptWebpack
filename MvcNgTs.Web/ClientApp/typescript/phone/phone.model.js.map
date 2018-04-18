@@ -1,1 +1,0 @@
-{"version":3,"file":"phone.model.js","sourceRoot":"","sources":["phone.model.ts"],"names":[],"mappings":"AAKA,MAAM,CAAC,IAAM,MAAM,GAAa;IAC5B;QACI,IAAI,EAAE,SAAS;QACf,OAAO,EAAE,oCAAoC;KAChD,EAAE;QACC,IAAI,EAAE,2BAA2B;QACjC,OAAO,EAAE,mCAAmC;KAC/C,EAAE;QACC,IAAI,EAAE,gBAAgB;QACtB,OAAO,EAAE,mCAAmC;KAC/C;CACJ,CAAC"}

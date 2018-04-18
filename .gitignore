@@ -1,3 +1,7 @@
+# Transpiled javscript files
+MvcNgTs.Web/ClientApp/typescript/**/*.js
+MvcNgTs.Web/ClientApp/typescript/**/*.js.map
+
 # Build results
 MvcNgTs.Web/bin/
 MvcNgTs.Web/Bin/
