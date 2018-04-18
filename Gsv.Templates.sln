@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcNgTs.Web", "MvcNgTs.Web\MvcNgTs.Web.csproj", "{09517E25-18BB-4243-8E00-C34F9E086787}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".git", ".git", "{CC4CAA17-FD8B-4F24-9BA4-BCFAD87E4E76}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "git", "git", "{CC4CAA17-FD8B-4F24-9BA4-BCFAD87E4E76}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 	EndProjectSection

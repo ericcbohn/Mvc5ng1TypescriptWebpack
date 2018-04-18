@@ -2,6 +2,10 @@
   "name": "MvcNgTs.Web",
   "version": "1.0.0",
   "description": "MVC, AngularJS, Typescript Template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericcbohn/Mvc5ng1TypescriptWebpack.git"
+  },
   "scripts": {
     "build": "webpack --env dev --config webpack.config.js",
     "build-watch": "webpack --env dev --watch true --config webpack.config.js",
