@@ -5,7 +5,6 @@ const phoneTemplate = require('./phone.component.html');
 
 // don't override the default $ctrl refernce (aka don't use controllerAs)
 export class PhoneController {
-    //static $inject: string[] = [];
     phones: IPhone[];
 
     constructor() {
@@ -13,7 +12,6 @@ export class PhoneController {
     }
 
     throwException() {
-        //this.logger.error('toastr works!', 'test data', 'the title');
         throw new Error('phone.component.js throwException() test error');
     }
 

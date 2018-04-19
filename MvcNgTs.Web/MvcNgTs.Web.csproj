@@ -178,13 +178,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClientApp\app\components\phone\phone.component.html" />
-    <Content Include="ClientApp\typescript\phone\phone.component.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="webpack.config.js" />
     <Content Include="ClientApp\ng\app\Site.scss" />
     <Content Include="ClientApp\app\Site.scss" />
-    <None Include="ClientApp\typescript\Site.scss" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -243,7 +241,6 @@
     <TypeScriptCompile Include="ClientApp\app\app.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\common.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\exception\exception.module.ts" />
-    <TypeScriptCompile Include="ClientApp\app\common\exception\exception.service.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\logging\logger.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\logging\logger.service.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\components.module.ts" />
@@ -251,16 +248,6 @@
     <TypeScriptCompile Include="ClientApp\app\components\phone\phone.model.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\phone\phone.module.ts" />
     <TypeScriptCompile Include="ClientApp\test\boot-tests.ts" />
-    <TypeScriptCompile Include="ClientApp\typescript\app.module.ts" />
-    <TypeScriptCompile Include="ClientApp\typescript\blocks\exception\exception.module.ts" />
-    <TypeScriptCompile Include="ClientApp\typescript\blocks\exception\exception.service.ts" />
-    <TypeScriptCompile Include="ClientApp\typescript\blocks\logging\logger.module.ts" />
-    <TypeScriptCompile Include="ClientApp\typescript\blocks\logging\logger.service.ts" />
-    <TypeScriptCompile Include="ClientApp\typescript\bootstrap.ts" />
-    <TypeScriptCompile Include="ClientApp\typescript\core\core.module.ts" />
-    <TypeScriptCompile Include="ClientApp\typescript\phone\phone.component.ts" />
-    <TypeScriptCompile Include="ClientApp\typescript\phone\phone.model.ts" />
-    <TypeScriptCompile Include="ClientApp\typescript\phone\phone.module.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

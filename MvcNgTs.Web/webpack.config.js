@@ -11,7 +11,6 @@ const webpack = require("webpack");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 const appEntryPath = "./ClientApp/app/app.module.ts";
-//const appEntryPath = "./ClientApp/typescript/app.module.ts";
 const babelOptions = {
     "babelrc": false,
     "presets": ["env"],
@@ -119,7 +118,6 @@ module.exports = (env) => {
                     "jquery",
                     "jquery-validation",
                     "jquery-validation-unobtrusive",
-                    //"npm",
                     "popper.js",
                     "toastr"
                     // npm packages are added to vendor code separately in splitChunks config below

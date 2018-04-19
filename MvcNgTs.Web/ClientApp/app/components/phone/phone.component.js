@@ -6,7 +6,6 @@ var PhoneController = /** @class */ (function () {
         this.phones = PHONES;
     }
     PhoneController.prototype.throwException = function () {
-        //this.logger.error('toastr works!', 'test data', 'the title');
         throw new Error('phone.component.js throwException() test error');
     };
     // https://github.com/toddmotto/angularjs-styleguide/tree/master/typescript#resources
