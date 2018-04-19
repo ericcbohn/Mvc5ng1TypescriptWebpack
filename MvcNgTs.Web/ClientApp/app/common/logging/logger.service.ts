@@ -1,5 +1,4 @@
-﻿import { Injectable } from 'angular-ts-decorators';
-import * as toastr from 'toastr';
+﻿import * as toastr from 'toastr';
 
 export interface ILoggerService {
     error(message: string, title: string, data: string): void;
@@ -8,10 +7,9 @@ export interface ILoggerService {
     warning(message: string, title: string, data: string): void;
 }
 
-@Injectable('ILoggerService')
 export class LoggerService implements ILoggerService {
+    static $inject: string[] = ['$log'];
 
-    /* @ngInject */
     constructor(private $log: ng.ILogService) {
         this.configureToastr();
     }

@@ -1,14 +1,8 @@
-// reference: https://github.com/toddmotto/angularjs-styleguide
-
-'use strict';
-
-//import * as angular from 'angular';
-
-// Define the `phoneApp` module, and its dependent modules
-angular.module('transportApp', [
-    /* feature modules */
-    'app.transport'//,
-
-    /* common modules */
-    //'app.core'
-]);
+import './Site.scss';
+import 'bootstrap';
+import * as angular from 'angular';
+import { ComponentsModule } from './components/components.module';
+import { CommonModule } from './common/common.module';
+var root = angular.module('app', [ComponentsModule, CommonModule]).name;
+export default root;
+//# sourceMappingURL=app.module.js.map

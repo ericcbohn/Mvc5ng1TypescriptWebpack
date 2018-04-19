@@ -1,7 +1,6 @@
 ﻿/// <binding />
 var gulp = require('gulp');
 var Server = require('karma').Server;
-var less = require('gulp-less');
 var path = require('path');
 
 // Run test once and exit

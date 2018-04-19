@@ -1,4 +1,6 @@
-﻿Server Dependencies:
+﻿.Web application best practices followed: https://github.com/toddmotto/angularjs-styleguide
+
+Server Dependencies:
 - gulp (npm i -g gulp): less to css, karma-jasmine unit-tests
 - karma (npm i -g karma)
 - node/npm (npm i -g npm)

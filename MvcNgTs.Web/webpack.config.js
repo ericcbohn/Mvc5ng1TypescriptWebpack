@@ -10,7 +10,8 @@ const path = require("path");
 const webpack = require("webpack");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
-const appEntryPath = "./ClientApp/typescript/app.module.ts";
+const appEntryPath = "./ClientApp/app/app.module.ts";
+//const appEntryPath = "./ClientApp/typescript/app.module.ts";
 const babelOptions = {
     "babelrc": false,
     "presets": ["env"],

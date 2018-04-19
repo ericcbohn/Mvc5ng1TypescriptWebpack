@@ -177,10 +177,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientApp\app\components\phone\phone.component.html" />
     <Content Include="ClientApp\typescript\phone\phone.component.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="webpack.config.js" />
+    <Content Include="ClientApp\ng\app\Site.scss" />
     <Content Include="ClientApp\app\Site.scss" />
     <None Include="ClientApp\typescript\Site.scss" />
     <Content Include="ApplicationInsights.config">
@@ -188,21 +190,21 @@
     </Content>
     <Content Include="gulpfile.js" />
     <Content Include="READ.txt" />
-    <Content Include="ClientApp\app\app.module.js" />
-    <Content Include="ClientApp\app\blocks\exception\exception.handler.decorator.js" />
-    <Content Include="ClientApp\app\blocks\exception\exception.handler.decorator.spec.js" />
-    <Content Include="ClientApp\app\blocks\exception\exception.factory.js" />
-    <Content Include="ClientApp\app\blocks\exception\exception.module.js" />
-    <Content Include="ClientApp\app\blocks\logging\logger.factory.js" />
-    <Content Include="ClientApp\app\blocks\logging\logger.module.js" />
-    <Content Include="ClientApp\app\blocks\logging\logger.factory.spec.js" />
-    <Content Include="ClientApp\app\core\core.config.js" />
-    <Content Include="ClientApp\app\core\core.constant.js" />
-    <Content Include="ClientApp\app\core\core.module.js" />
-    <Content Include="ClientApp\app\transport\transport.component.html" />
-    <Content Include="ClientApp\app\transport\transport.component.js" />
-    <Content Include="ClientApp\app\transport\transport.component.spec.js" />
-    <Content Include="ClientApp\app\transport\transport.module.js" />
+    <Content Include="ClientApp\ng\app\app.module.js" />
+    <Content Include="ClientApp\ng\app\blocks\exception\exception.handler.decorator.js" />
+    <Content Include="ClientApp\ng\app\blocks\exception\exception.handler.decorator.spec.js" />
+    <Content Include="ClientApp\ng\app\blocks\exception\exception.factory.js" />
+    <Content Include="ClientApp\ng\app\blocks\exception\exception.module.js" />
+    <Content Include="ClientApp\ng\app\blocks\logging\logger.factory.js" />
+    <Content Include="ClientApp\ng\app\blocks\logging\logger.module.js" />
+    <Content Include="ClientApp\ng\app\blocks\logging\logger.factory.spec.js" />
+    <Content Include="ClientApp\ng\app\core\core.config.js" />
+    <Content Include="ClientApp\ng\app\core\core.constant.js" />
+    <Content Include="ClientApp\ng\app\core\core.module.js" />
+    <Content Include="ClientApp\ng\app\transport\transport.component.html" />
+    <Content Include="ClientApp\ng\app\transport\transport.component.js" />
+    <Content Include="ClientApp\ng\app\transport\transport.component.spec.js" />
+    <Content Include="ClientApp\ng\app\transport\transport.module.js" />
     <Content Include="ClientApp\test\specHelper.js" />
     <Content Include="package.json" />
     <Content Include="package-lock.json" />
@@ -238,10 +240,20 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\app.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\common\common.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\common\exception\exception.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\common\exception\exception.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\common\logging\logger.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\common\logging\logger.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\components.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\phone\phone.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\phone\phone.model.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\phone\phone.module.ts" />
     <TypeScriptCompile Include="ClientApp\test\boot-tests.ts" />
     <TypeScriptCompile Include="ClientApp\typescript\app.module.ts" />
     <TypeScriptCompile Include="ClientApp\typescript\blocks\exception\exception.module.ts" />
-    <TypeScriptCompile Include="ClientApp\typescript\blocks\exception\exception.provider.ts" />
+    <TypeScriptCompile Include="ClientApp\typescript\blocks\exception\exception.service.ts" />
     <TypeScriptCompile Include="ClientApp\typescript\blocks\logging\logger.module.ts" />
     <TypeScriptCompile Include="ClientApp\typescript\blocks\logging\logger.service.ts" />
     <TypeScriptCompile Include="ClientApp\typescript\bootstrap.ts" />
