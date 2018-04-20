@@ -240,6 +240,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\app.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\common.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\common\exception\exception.handler.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\exception\exception.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\logging\logger.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\logging\logger.service.ts" />

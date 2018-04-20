@@ -11,6 +11,12 @@ const webpack = require("webpack");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 const appEntryPath = "./ClientApp/app/app.module.ts";
+const bundleOutputPath = path.resolve(__dirname + "/ClientApp/dist");
+
+const devBundleName = "[name].bundle.js";
+const prodBundleName = "[name].[chunkhash].min.js";
+const prodCssBundleName = "[name].[contenthash].css";
+
 const babelOptions = {
     "babelrc": false,
     "presets": ["env"],
@@ -32,8 +38,8 @@ module.exports = (env) => {
         // entry: the module webpack uses to build its internal dependency graph. Webpack will figure out which other modules and libraries that entry point depends on (directly and indirectly).
         entry: { app: appEntryPath },
         output: {
-            filename: "[name].bundle.js",
-            path: path.resolve(__dirname + "/ClientApp/dist")//,
+            filename: devBundleName,
+            path: bundleOutputPath//,
             // Defining a global var that can used to call functions from within ASP.NET Razor pages.
             //library: "TransportLibrary", // variable 'TransportLibrary' will be bound with return value of entry file, if the resulting output is included as a script tag in an HTML page.  NOTE: default output.libraryTarget is 'var'
         },
@@ -110,7 +116,6 @@ module.exports = (env) => {
                 // code splitting: we take all of our vendor code and put it in a separate bundle (vendor.[chunkhash].js)
                 // this way it will have better caching/cache hits since it changes infrequently
                 vendor: [
-                    // local packages
                     "angular",
                     "angular-animate",
                     "angular-sanitize",
@@ -120,13 +125,25 @@ module.exports = (env) => {
                     "jquery-validation-unobtrusive",
                     "popper.js",
                     "toastr"
-                    // npm packages are added to vendor code separately in splitChunks config below
                 ]
             },
 
             output: {
-                filename: "[name].[chunkhash].min.js"
+                filename: prodBundleName
                 //publicPath: // static content URL path (if used)
+            },
+
+            optimization: {
+                runtimeChunk: { name: "vendor" },
+                splitChunks: {
+                    cacheGroups: {
+                        commons: {
+                            test: /[\\/]node_modules[\\/]/,
+                            name: "vendor",
+                            chunks: "all"
+                        }
+                    }
+                }
             },
 
             module: {
@@ -150,7 +167,7 @@ module.exports = (env) => {
 
                 // Write out CSS bundle to its own file:
                 new ExtractTextPlugin({
-                    filename: "[name].[contenthash].css"
+                    filename: prodCssBundleName
                 }),
                 new webpack.LoaderOptionsPlugin({ minimize: true, debug: false }),
                 new UglifyJSPlugin({
@@ -167,7 +184,6 @@ module.exports = (env) => {
         console.log("merging development config");
         return Merge(sharedConfig, {
             mode: "development",
-            //watch: true,
             // enhance debugging by adding meta info for the browser devtools
             // source-map most detailed at the expense of build speed.
             devtool: "source-map",//"inline-source-map", // enum
