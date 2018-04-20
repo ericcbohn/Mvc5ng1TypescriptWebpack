@@ -8,15 +8,16 @@ export interface ILoggerService {
 }
 
 export class LoggerService implements ILoggerService {
-    static $inject: string[] = ['$log'];
+    static $inject: string[] = ['$log', '$http'];
 
-    constructor(private $log: ng.ILogService) {
+    constructor(private $log: ng.ILogService, private $http: angular.IHttpService) {
         this.configureToastr();
     }
 
     error(message: string, title: string, data: string): void {
         toastr.error(message, title);
         this.$log.error('Error: ' + message, data);
+        this.$http.post('/Error/LogException', message,)
     }
 
     info(message: string, title: string, data: string): void {

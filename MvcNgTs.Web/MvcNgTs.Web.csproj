@@ -51,8 +51,11 @@
     <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Bootstrapper, Version=1.0.21423.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.bootstrapper.1.0.1\lib\net45\Elmah.Bootstrapper.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -90,9 +93,6 @@
     </Reference>
     <Reference Include="Ninject.Extensions.Logging, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.Extensions.Logging.3.2.0.0\lib\net45-full\Ninject.Extensions.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Extensions.Logging.Log4Net, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.Extensions.Logging.Log4net.3.2.3.0\lib\net45-full\Ninject.Extensions.Logging.Log4Net.dll</HintPath>
     </Reference>
     <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
@@ -162,7 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\LoggingConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
@@ -206,6 +205,7 @@
     <Content Include="ClientApp\test\specHelper.js" />
     <Content Include="package.json" />
     <Content Include="package-lock.json" />
+    <Content Include="Elmah.Athz.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="ClientApp\test\Karma.conf.js" />
     <Content Include="Web.config">
@@ -228,7 +228,7 @@
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\log\" />
+    <Folder Include="App_Data\errors\xmlstore\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
