@@ -1,4 +1,4 @@
-﻿using System.Web;
+﻿using System.Web.Http.Filters;
 using System.Web.Mvc;
 
 namespace MvcNgTs.Web
@@ -9,7 +9,12 @@ namespace MvcNgTs.Web
         {
             // only handles 500 internal server errors
             // need <customErrors mode="On"> in web.config
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new ElmahMvcErrorAttribute());//HandleErrorAttribute());
+        }
+
+        public static void RegisterGlobalFilters(HttpFilterCollection filters)
+        {
+            filters.Add(new ElmahApiErrorAttribute());
         }
     }
 }

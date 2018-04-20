@@ -2,7 +2,6 @@
 
 namespace MvcNgTs.Web.Controllers
 {
-    // TODO: handle errors to api endpoints from AngularJS: https://stackoverflow.com/questions/21993758/asp-net-mvc-5-error-handling
     public class ErrorController : Controller
     {
         public ActionResult Index()
@@ -19,9 +18,9 @@ namespace MvcNgTs.Web.Controllers
         }
 
         /// <summary>
-        /// Handle 403 errors
+        /// Handle 403 & 401 errors
         /// </summary>
-        public ActionResult BadRequest()
+        public ActionResult Unauthorized()
         {
             return View();
         }

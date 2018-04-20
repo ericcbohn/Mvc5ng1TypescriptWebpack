@@ -166,10 +166,13 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\AngularException.cs" />
+    <Compile Include="Helpers\WebClientException.cs" />
+    <Compile Include="Helpers\ElmahApiErrorAttribute.cs" />
+    <Compile Include="Helpers\ElmahMvcErrorAttribute.cs" />
     <Compile Include="Helpers\ExtensionsForAssembly.cs" />
     <Compile Include="Helpers\ExtensionsForDateTime.cs" />
     <Compile Include="Helpers\ExtensionsForKernel.cs" />
@@ -226,6 +229,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="tsconfig.json" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Error\Unauthorized.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\errors\xmlstore\" />
