@@ -1,30 +1,40 @@
-﻿using System;
+﻿using Ninject.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using Elmah;
 
-namespace MvcNgTs.Web.Controllers
+namespace MvcNgTs.Web.Controllers.Logging
 {
     // api/log/
     public class LogController : ApiController
     {
+        private readonly ILogger _logger;
+
+        public LogController(ILogger log)
+        {
+            _logger = log;
+        }
+
         private static string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
     
         [HttpPost]
-        public void LogClientError([FromBody]string message)
+        public void LogMessage([FromBody]LogModel log) // TODO: [FromBody]LogModel log)
         {
-            ErrorSignal.FromCurrentContext().Raise(new WebClientException(message));
+            _logger.Info(log.Message + " " + log.Data + " " + log.Source + " " + log.Type);
+            //StrategyFactory.ExcecuteStrategy();
+            // TODO: strategy pattern that logs to Elmah for errors, and log4net for all other
         }
 
         // TODO: remove once done testing and developing
         [HttpPut]
         public void Throw(string test)
         {
-            Int16.Parse(test);
+            _logger.Error("test log4net");
+            //Int16.Parse(test);
         }
 
         [HttpGet]
@@ -38,20 +48,21 @@ namespace MvcNgTs.Web.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             });
         }
+    }
 
-        public class WeatherForecast
+    public class WeatherForecast
+    {
+        public string DateFormatted { get; set; }
+        public int TemperatureC { get; set; }
+        public string Summary { get; set; }
+
+        public int TemperatureF
         {
-            public string DateFormatted { get; set; }
-            public int TemperatureC { get; set; }
-            public string Summary { get; set; }
-
-            public int TemperatureF
+            get
             {
-                get
-                {
-                    return 32 + (int)(TemperatureC / 0.5556);
-                }
+                return 32 + (int)(TemperatureC / 0.5556);
             }
         }
     }
+
 }

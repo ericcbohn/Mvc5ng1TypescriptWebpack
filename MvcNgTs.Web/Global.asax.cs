@@ -13,19 +13,18 @@ namespace MvcNgTs.Web
         {
             var kernel = new StandardKernel();
             kernel.LoadIfNotLoaded(AppDomain.CurrentDomain.GetAssemblies());
-
             return kernel;
         }
 
         protected override void OnApplicationStarted()
         {
             base.OnApplicationStarted();
-
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             FilterConfig.RegisterGlobalFilters(GlobalConfiguration.Configuration.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            LoggingConfig.RegisterLogging();
         }
     }
 }

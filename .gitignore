@@ -25,4 +25,5 @@ MvcNgTs.Web/node_modules/
 
 # log files
 MvcNgTs.Web/App_Data/errors/
+MvcNgTs.Web/App_Data/log/
 

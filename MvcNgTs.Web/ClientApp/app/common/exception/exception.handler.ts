@@ -1,13 +1,14 @@
 ﻿import { ILoggerService } from '../logging/logger.service';
 
 export namespace ExceptionExtension {
-    export const ExtendExceptionHandler = ($delegate: ng.IExceptionHandlerService, logger: ILoggerService) => {
+    export const ExtendExceptionHandler = ($delegate: ng.IExceptionHandlerService, $injector: ng.auto.IInjectorService) => {
         return function (exception: Error, cause?: string): void {
             $delegate(exception, cause);
-            logger.error(exception.message, "There was an error.", cause ? cause : "");
+            let logger: ILoggerService = $injector.get<ILoggerService>('ILoggerService');
+            logger.error(exception.message, cause ? cause : "No data available");
         }
     };
-    ExtendExceptionHandler.$inject = ['$delegate', 'ILoggerService'];
+    ExtendExceptionHandler.$inject = ['$delegate', '$injector'];
 
     export const Configure = ($provide: ng.auto.IProvideService) => {
         $provide.decorator('$exceptionHandler', ExtendExceptionHandler);

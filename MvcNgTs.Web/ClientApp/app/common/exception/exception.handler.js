@@ -1,12 +1,13 @@
 export var ExceptionExtension;
 (function (ExceptionExtension) {
-    ExceptionExtension.ExtendExceptionHandler = function ($delegate, logger) {
+    ExceptionExtension.ExtendExceptionHandler = function ($delegate, $injector) {
         return function (exception, cause) {
             $delegate(exception, cause);
-            logger.error(exception.message, "There was an error.", cause ? cause : "");
+            var logger = $injector.get('ILoggerService');
+            logger.error(exception.message, cause ? cause : "No data available");
         };
     };
-    ExceptionExtension.ExtendExceptionHandler.$inject = ['$delegate', 'ILoggerService'];
+    ExceptionExtension.ExtendExceptionHandler.$inject = ['$delegate', '$injector'];
     ExceptionExtension.Configure = function ($provide) {
         $provide.decorator('$exceptionHandler', ExceptionExtension.ExtendExceptionHandler);
     };

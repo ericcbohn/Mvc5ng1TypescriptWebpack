@@ -3,24 +3,28 @@ var LoggerService = /** @class */ (function () {
     function LoggerService($log, $http) {
         this.$log = $log;
         this.$http = $http;
+        this.logUrl = '/api/log';
         this.configureToastr();
     }
-    LoggerService.prototype.error = function (message, title, data) {
-        toastr.error(message, title);
+    LoggerService.prototype.error = function (message, data) {
+        toastr.error(message, 'Error');
         this.$log.error('Error: ' + message, data);
-        this.$http.post('/Error/LogException', message);
+        this.$http.post(this.logUrl, { message: message });
     };
-    LoggerService.prototype.info = function (message, title, data) {
-        toastr.info(message, title);
+    LoggerService.prototype.info = function (message, data) {
+        toastr.info(message, 'Info');
         this.$log.info('Info: ' + message, data);
+        this.$http.post(this.logUrl, { message: message });
     };
-    LoggerService.prototype.success = function (message, title, data) {
-        toastr.success(message, title);
+    LoggerService.prototype.success = function (message, data) {
+        toastr.success(message, 'Success');
         this.$log.info('Success: ' + message, data);
+        this.$http.post(this.logUrl, { message: message });
     };
-    LoggerService.prototype.warning = function (message, title, data) {
-        toastr.warning(message, title);
+    LoggerService.prototype.warning = function (message, data) {
+        toastr.warning(message, 'Warning');
         this.$log.warn('Warning: ' + message, data);
+        this.$http.post(this.logUrl, { message: message });
     };
     LoggerService.prototype.configureToastr = function () {
         toastr.options.timeOut = 4000;

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Ninject.Extensions.Logging;
 
-namespace MvcNgTs.Web.Controllers
+namespace MvcNgTs.Web.Controllers.Home
 {
     public class HomeController : Controller
     {
