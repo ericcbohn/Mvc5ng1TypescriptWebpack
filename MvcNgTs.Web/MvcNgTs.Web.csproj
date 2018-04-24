@@ -182,7 +182,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Exception\ErrorController.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
-    <Compile Include="Controllers\Logging\LoggingModule.cs" />
+    <Compile Include="Controllers\Logging\LogModule.cs" />
     <Compile Include="Controllers\Logging\LogModels.cs" />
     <Compile Include="Controllers\Logging\LogController.cs" />
     <Compile Include="Controllers\Logging\LogStrategy\AbstractLogStrategy.cs" />

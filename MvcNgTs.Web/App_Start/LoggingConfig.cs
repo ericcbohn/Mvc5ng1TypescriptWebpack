@@ -5,6 +5,9 @@ namespace MvcNgTs.Web
 {
     public class LoggingConfig
     {
+        /// <summary>
+        /// Configure Log4Net logging
+        /// </summary>
         public static void RegisterLogging()
         {
             var logName = string.Format("{0}-{1}.log", DateTime.UtcNow.ToYrMoDayStr(), Assembly.GetExecutingAssembly().GetName().Name);

@@ -2,6 +2,10 @@
 
 namespace MvcNgTs.Web.Controllers.Exception
 {
+    /// <summary>
+    /// Provides user friendly page when exception occurs 
+    /// </summary>
+    /// <remarks>customErrors in Web.config must be mode="On"</remarks>
     public class ErrorController : Controller
     {
         /// <summary>

@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace MvcNgTs.Web.Controllers.Logging
 {
-    public class LoggingModule : NinjectModule
+    public class LogModule : NinjectModule
     {
         public override void Load()
         {

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
+// TODO: add authorization for viewing /elmah page
 namespace MvcNgTs.Web.Controllers.Logging
 {
     // api/log/
