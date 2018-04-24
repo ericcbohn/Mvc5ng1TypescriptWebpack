@@ -6,9 +6,9 @@ namespace MvcNgTs.Web.Controllers.Logging.LogStrategy
     {
         public InfoLogStrategy(ILogger logger) : base(logger) { }
 
-        public override void Execute(string message, string data)
+        public override void Execute(LogModel log)
         {
-            _logger.Info(message);
+            _logger.Info(log.Message);
         }
     }
 }

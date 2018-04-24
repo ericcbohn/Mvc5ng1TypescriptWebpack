@@ -11,6 +11,6 @@ namespace MvcNgTs.Web.Controllers.Logging.LogStrategy
             _logger = logger;
         }
 
-        public abstract void Execute(string message, string data);
+        public abstract void Execute(LogModel log);
     }
 }

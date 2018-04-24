@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MvcNgTs.Web.Controllers.Logging.LogStrategy
+﻿namespace MvcNgTs.Web.Controllers.Logging.LogStrategy
 {
+    /// <summary>
+    /// IoC container provides instance to get concrete implementations of ILogStrategy based on the type of log (error, info, debug, warning), and logs appropriately.
+    /// </summary>
     public interface ILogStrategyFactory
     {
-        void ExecuteLogStrategy();
+        ILogStrategy GetStrategy(LogType logType);
     }
 }

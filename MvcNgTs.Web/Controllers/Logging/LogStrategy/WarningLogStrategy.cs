@@ -6,9 +6,9 @@ namespace MvcNgTs.Web.Controllers.Logging.LogStrategy
     {
         public WarningLogStrategy(ILogger logger) : base(logger) { }
 
-        public override void Execute(string message, string data)
+        public override void Execute(LogModel log)
         {
-            _logger.Warn(message);
+            _logger.Warn(log.Message);
         }
     }
 }

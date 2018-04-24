@@ -2,6 +2,6 @@
 {
     public interface ILogStrategy
     {
-        void Execute(string message, string data);
+        void Execute(LogModel log);
     }
 }

@@ -1,4 +1,4 @@
-﻿using Ninject.Extensions.Logging;
+﻿using MvcNgTs.Web.Controllers.Logging.LogStrategy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +9,11 @@ namespace MvcNgTs.Web.Controllers.Logging
     // api/log/
     public class LogController : ApiController
     {
-        private readonly ILogger _logger;
+        private readonly ILogStrategyFactory LogFactory;
 
-        public LogController(ILogger log)
+        public LogController(ILogStrategyFactory logFactory)
         {
-            _logger = log;
+            LogFactory = logFactory;
         }
 
         private static string[] Summaries = new[]
@@ -21,20 +21,21 @@ namespace MvcNgTs.Web.Controllers.Logging
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
     
+        /// <summary>
+        /// Log message from client (error, info, debug, warning).
+        /// </summary>
+        /// <param name="log">Object containing log information</param>
         [HttpPost]
-        public void LogMessage([FromBody]LogModel log) // TODO: [FromBody]LogModel log)
+        public void LogMessage([FromBody]LogModel log)
         {
-            _logger.Info(log.Message + " " + log.Data + " " + log.Source + " " + log.Type);
-            //StrategyFactory.ExcecuteStrategy();
-            // TODO: strategy pattern that logs to Elmah for errors, and log4net for all other
+            LogFactory.GetStrategy(log.Type).Execute(log);
         }
 
         // TODO: remove once done testing and developing
         [HttpPut]
         public void Throw(string test)
         {
-            _logger.Error("test log4net");
-            //Int16.Parse(test);
+            Int16.Parse(test);
         }
 
         [HttpGet]
