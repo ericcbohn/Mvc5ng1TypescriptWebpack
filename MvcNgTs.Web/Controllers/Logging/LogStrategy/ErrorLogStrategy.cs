@@ -2,6 +2,9 @@
 
 namespace MvcNgTs.Web.Controllers.Logging.LogStrategy
 {
+    /// <summary>
+    /// Logs errors to Elmah.
+    /// </summary>
     public class ErrorLogStrategy : ILogStrategy
     {
         public void Execute(LogModel log)

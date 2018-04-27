@@ -235,7 +235,7 @@
     <Content Include="package-lock.json" />
     <Content Include="Elmah.Athz.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <Content Include="ClientApp\test\Karma.conf.js" />
+    <Content Include="Karma.conf.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -275,10 +275,10 @@
     <TypeScriptCompile Include="ClientApp\app\common\logging\logger.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\logging\logger.service.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\components.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\phone\phone.component.spec.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\phone\phone.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\phone\phone.model.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\phone\phone.module.ts" />
-    <TypeScriptCompile Include="ClientApp\test\boot-tests.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

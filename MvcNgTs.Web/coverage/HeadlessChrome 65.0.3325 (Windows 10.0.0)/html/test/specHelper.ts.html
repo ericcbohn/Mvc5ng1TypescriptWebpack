@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for test\specHelper.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">test/</a> specHelper.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">13.95% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">13.95% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/43</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import * as angular from 'angular';
+import * as sinon from 'sinon';
+&nbsp;
+export namespace SpecHelper {
+    export const FakeLogger = <span class="fstat-no" title="function not covered" >($provide: ng.auto.IProvideService)</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >        $provide.value('ILoggerService', sinon.stub({</span>
+            error: <span class="fstat-no" title="function not covered" >function () { </span>},
+            info: <span class="fstat-no" title="function not covered" >function () { </span>},
+            warning: <span class="fstat-no" title="function not covered" >function () { </span>},
+            success: <span class="fstat-no" title="function not covered" >function () { </span>}
+        }));
+    };
+&nbsp;
+    export const GetFnParams = <span class="fstat-no" title="function not covered" >(fn: Function)</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >        let fnText: string;</span>
+<span class="cstat-no" title="statement not covered" >        let argDecl: RegExpMatchArray;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        let FN_ARGS = /^function\s*[^\(]*\(\s*([^\)]*)\)/m;</span>
+<span class="cstat-no" title="statement not covered" >        let FN_ARG_SPLIT = /,/;</span>
+<span class="cstat-no" title="statement not covered" >        let FN_ARG = /^\s*(_?)(\S+?)\1\s*$/;</span>
+<span class="cstat-no" title="statement not covered" >        let STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg;</span>
+<span class="cstat-no" title="statement not covered" >        let params: string[] = [];</span>
+<span class="cstat-no" title="statement not covered" >        if (fn.length) {</span>
+<span class="cstat-no" title="statement not covered" >            fnText = fn.toString().replace(STRIP_COMMENTS, '');</span>
+<span class="cstat-no" title="statement not covered" >            argDecl = &lt;RegExpMatchArray&gt;fnText.match(FN_ARGS);</span>
+<span class="cstat-no" title="statement not covered" >            let argMatch: RegExpExecArray;</span>
+<span class="cstat-no" title="statement not covered" >            angular.forEach(argDecl[1].split(FN_ARG_SPLIT), <span class="fstat-no" title="function not covered" >function (arg: string)</span> {</span>
+<span class="cstat-no" title="statement not covered" >                argMatch = &lt;RegExpExecArray&gt;FN_ARG.exec(arg);</span>
+<span class="cstat-no" title="statement not covered" >                params.push(argMatch[2]);</span>
+                //arg.replace(FN_ARG, function (all: string, underscore: string, name: string) {
+                //    params.push(name);
+                //});
+            });
+        }
+<span class="cstat-no" title="statement not covered" >        return params;</span>
+    };
+&nbsp;
+    export const Injector = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        let annotation: string,</span>
+            body: string = '',
+            cleanupBody: string = '',
+            mustAnnotate: boolean = false,
+            params: string[];
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (typeof arguments[0] === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >            params = GetFnParams(arguments[0]);</span>
+        }
+        // else from here on assume that arguments are all strings
+        else <span class="cstat-no" title="statement not covered" >if (angular.isArray(arguments[0])) {</span>
+<span class="cstat-no" title="statement not covered" >            params = arguments[0];</span>
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >            params = Array.prototype.slice.call(arguments);</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        annotation = params.join('\',\''); </span>// might need to annotate
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        angular.forEach(params, <span class="fstat-no" title="function not covered" >function (name, ix)</span> {</span>
+<span class="cstat-no" title="statement not covered" >            var _name,</span>
+                pathName = name.split('.'),
+                pathLen = pathName.length;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (pathLen &gt; 1) {</span>
+                // name is a path like 'block.foo'. Can't use as identifier
+                // assume last segment should be identifier name, e.g. 'foo'
+<span class="cstat-no" title="statement not covered" >                name = pathName[pathLen - 1];</span>
+<span class="cstat-no" title="statement not covered" >                mustAnnotate = true;</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _name = '_' + name + '_';</span>
+<span class="cstat-no" title="statement not covered" >            params[ix] = _name;</span>
+<span class="cstat-no" title="statement not covered" >            body += name + '=' + _name + ';';</span>
+<span class="cstat-no" title="statement not covered" >            cleanupBody += 'delete window.' + name + ';';</span>
+&nbsp;
+            // todo: tolerate component names that are invalid JS identifiers, e.g. 'burning man'
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var fn = 'function(' + params.join(',') + '){' + body + '}';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (mustAnnotate) {</span>
+<span class="cstat-no" title="statement not covered" >            fn = '[\'' + annotation + '\',' + fn + ']';</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var exp = 'inject(' + fn + ');' +</span>
+            'afterEach(function(){' + cleanupBody + '});'; // remove from window.
+&nbsp;
+        //Function(exp)(); // the assigned vars will be global. `afterEach` will remove them
+        /* jshint evil:true */
+        //new Function(exp)();
+<span class="cstat-no" title="statement not covered" >        return exp;</span>
+&nbsp;
+        // Alternative that would not touch window but would require eval()!!
+        // Don't do `Function(exp)()` and don't do afterEach cleanup
+        // Instead do ..
+        //     return exp;
+        //
+        // Then caller must say something like:
+        //     eval(specHelper.injector('$log', 'foo'));
+    };
+}
+&nbsp;
+//export namespace TestHelpers {
+//    export const specHelper = (function () {
+//        var service = {
+//            //fakeLogger: fakeLogger,
+//            injector: injector
+//        };
+//        return service;
+&nbsp;
+//        // mock the logger object logger.factory.js
+//        // When AngularJS starts an application with a given module, it creates a new instance of injector, which contains all the "recipes" (.provider, .value, .constant, .service, .factory) for creating objects - service objects (defined by developer) and specialized objects (conform to specific AngualrJS framework API, i.e. controllers, directives, filters, or animations)
+//        //function fakeLogger($provide: ng.auto.IProvideService) {
+//        //    $provide.value('ILoggerService', sinon.stub({
+//        //        error: function () { },
+//        //        info: function () { },
+//        //        warning: function () { },
+//        //        success: function () { }
+//        //    }));
+//        //}
+&nbsp;
+//        function injector() {
+//            var annotation,
+//                body = '',
+//                cleanupBody = '',
+//                mustAnnotate = false,
+//                params: string[];
+&nbsp;
+//            if (typeof arguments[0] === 'function') {
+//                params = getFnParams(arguments[0]);
+//            }
+//            // else from here on assume that arguments are all strings
+//            else if (angular.isArray(arguments[0])) {
+//                params = arguments[0];
+//            }
+//            else {
+//                params = Array.prototype.slice.call(arguments);
+//            }
+&nbsp;
+//            annotation = params.join('\',\''); // might need to annotate
+&nbsp;
+//            angular.forEach(params, function (name, ix) {
+//                var _name,
+//                    pathName = name.split('.'),
+//                    pathLen = pathName.length;
+&nbsp;
+//                if (pathLen &gt; 1) {
+//                    // name is a path like 'block.foo'. Can't use as identifier
+//                    // assume last segment should be identifier name, e.g. 'foo'
+//                    name = pathName[pathLen - 1];
+//                    mustAnnotate = true;
+//                }
+&nbsp;
+//                _name = '_' + name + '_';
+//                params[ix] = _name;
+//                body += name + '=' + _name + ';';
+//                cleanupBody += 'delete window.' + name + ';';
+&nbsp;
+//                // todo: tolerate component names that are invalid JS identifiers, e.g. 'burning man'
+//            });
+&nbsp;
+//            var fn = 'function(' + params.join(',') + '){' + body + '}';
+&nbsp;
+//            if (mustAnnotate) {
+//                fn = '[\'' + annotation + '\',' + fn + ']';
+//            }
+&nbsp;
+//            var exp = 'inject(' + fn + ');' +
+//                'afterEach(function(){' + cleanupBody + '});'; // remove from window.
+&nbsp;
+//            //Function(exp)(); // the assigned vars will be global. `afterEach` will remove them
+//            /* jshint evil:true */
+//            new Function(exp)();
+&nbsp;
+//            // Alternative that would not touch window but would require eval()!!
+//            // Don't do `Function(exp)()` and don't do afterEach cleanup
+//            // Instead do ..
+//            //     return exp;
+//            //
+//            // Then caller must say something like:
+//            //     eval(specHelper.injector('$log', 'foo'));
+//        }
+&nbsp;
+//        // Inspired by Angular; that's how they get the params for injection
+//        function getFnParams(fn: Function) {
+//            var fnText: string;
+//            var argDecl: RegExpMatchArray;
+&nbsp;
+//            var FN_ARGS = /^function\s*[^\(]*\(\s*([^\)]*)\)/m;
+//            var FN_ARG_SPLIT = /,/;
+//            var FN_ARG = /^\s*(_?)(\S+?)\1\s*$/;
+//            var STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg;
+//            var params: string[] = [];
+//            if (fn.length) {
+//                fnText = fn.toString().replace(STRIP_COMMENTS, '');
+//                argDecl = &lt;RegExpMatchArray&gt;fnText.match(FN_ARGS);
+//                angular.forEach(argDecl[1].split(FN_ARG_SPLIT), function (arg) {
+//                    params.push(arg.replace(FN_ARG, function (name));// {
+//                    //    params.push(name);
+//                    //});
+//                });
+//            }
+//            return params;
+//        }
+//    })();
+//}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Apr 27 2018 16:58:52 GMT-0500 (Central Daylight Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

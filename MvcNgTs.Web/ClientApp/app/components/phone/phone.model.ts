@@ -3,7 +3,12 @@
     snippet: string;
 }
 
-export const PHONES: IPhone[] = [
+export class Phone implements IPhone {
+    constructor(public name: string,
+        public snippet: string) {}
+}
+
+export const PHONES: Phone[] = [
     {
         name: 'Nexus S',
         snippet: 'Fast just got faster with Nexus S.'
