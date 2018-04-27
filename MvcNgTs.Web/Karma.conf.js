@@ -8,6 +8,6 @@ module.exports = function (config) {
         files: ['ClientApp/**/*.ts'],
         preprocessors: {'ClientApp/**/*.ts': 'karma-typescript'},
         reporters: ['progress', 'karma-typescript'],
-        browsers: ['ChromeHeadless']//'Chrome', 'Firefox', 'IE']
+        browsers: ['ChromeHeadless']
     });
 };
