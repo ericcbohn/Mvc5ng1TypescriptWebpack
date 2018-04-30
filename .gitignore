@@ -1,6 +1,9 @@
 # Transpiled javscript files
-MvcNgTs.Web/ClientApp/typescript/**/*.js
-MvcNgTs.Web/ClientApp/typescript/**/*.js.map
+MvcNgTs.Web/ClientApp/**/*.js
+MvcNgTs.Web/ClientApp/**/*.js.map
+
+# Karma
+MvcNgTs.Web/coverage/
 
 # Build results
 MvcNgTs.Web/bin/

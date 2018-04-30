@@ -1,4 +1,5 @@
 ﻿import * as toastr from 'toastr';
+//import { IHttpResponse } from 'angular';
 
 export enum LogType { Error, Info, Success, Warning };
 

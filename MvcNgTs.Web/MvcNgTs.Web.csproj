@@ -208,29 +208,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="webpack.config.js" />
-    <Content Include="ClientApp\ng\app\Site.scss" />
     <Content Include="ClientApp\app\Site.scss" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="gulpfile.js" />
     <Content Include="READ.txt" />
-    <Content Include="ClientApp\ng\app\app.module.js" />
-    <Content Include="ClientApp\ng\app\blocks\exception\exception.handler.decorator.js" />
-    <Content Include="ClientApp\ng\app\blocks\exception\exception.handler.decorator.spec.js" />
-    <Content Include="ClientApp\ng\app\blocks\exception\exception.factory.js" />
-    <Content Include="ClientApp\ng\app\blocks\exception\exception.module.js" />
-    <Content Include="ClientApp\ng\app\blocks\logging\logger.factory.js" />
-    <Content Include="ClientApp\ng\app\blocks\logging\logger.module.js" />
-    <Content Include="ClientApp\ng\app\blocks\logging\logger.factory.spec.js" />
-    <Content Include="ClientApp\ng\app\core\core.config.js" />
-    <Content Include="ClientApp\ng\app\core\core.constant.js" />
-    <Content Include="ClientApp\ng\app\core\core.module.js" />
-    <Content Include="ClientApp\ng\app\transport\transport.component.html" />
-    <Content Include="ClientApp\ng\app\transport\transport.component.js" />
-    <Content Include="ClientApp\ng\app\transport\transport.component.spec.js" />
-    <Content Include="ClientApp\ng\app\transport\transport.module.js" />
-    <Content Include="ClientApp\test\specHelper.js" />
+    <TypeScriptCompile Include="ClientApp\app\common\logging\logger.service.spec.ts" />
+    <TypeScriptCompile Include="ClientApp\test\specHelper.ts" />
     <Content Include="package.json" />
     <Content Include="package-lock.json" />
     <Content Include="Elmah.Athz.config" />
@@ -270,6 +255,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\app.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\common.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\common\exception\exception.handler.spec.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\exception\exception.handler.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\exception\exception.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\common\logging\logger.module.ts" />

@@ -1,14 +1,20 @@
 import * as angular from 'angular';
 import * as sinon from 'sinon';
+import 'angular-mocks';
 
 export namespace SpecHelper {
-    export const FakeLogger = ($provide: ng.auto.IProvideService) => {
+    export const MockLogger = ($provide: ng.auto.IProvideService) => {
         $provide.value('ILoggerService', sinon.stub({
             error: function () { },
             info: function () { },
             warning: function () { },
             success: function () { }
         }));
+    };
+
+    export const MockHttp = ($httpBackend: ng.IHttpBackendService) => {
+        let logUrl: string = '/api/log';
+        $httpBackend.expect('POST', logUrl).respond(200);
     };
 
     export const GetFnParams = (fn: Function) => {
